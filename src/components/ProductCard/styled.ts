@@ -46,17 +46,33 @@ export const CardInfo = styled('div')`
   padding: 20px;
   border-top: 1px solid #ddd;
 
-  span {
+  h2 {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.5);
+
+    font-weight: 400;
+    line-height: 1.3;
+    max-height: 36px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    margin-bottom: 1rem;
+  }
+
+  > span {
     font-size: 1.875rem;
     font-weight: 400;
     display: block;
     margin-bottom: 10px;
   }
+`;
 
-  h2 {
-    font-size: 0.938rem;
-    color: rgba(0, 0, 0, 0.5);
-    line-height: 1.5;
-    font-weight: 500;
+export const SplitPrice = styled('span')`
+  line-height: 1.25;
+  font-size: 0.875rem;
+
+  > span {
+    color: #00a650;
   }
 `;

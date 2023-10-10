@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CartItemContainer = styled('section')`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
   position: relative;
@@ -25,6 +25,13 @@ export const CartItemContent = styled('section')`
     font-weight: 500;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 8px;
+
+    line-height: 1.3;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+
   }
 
   span {

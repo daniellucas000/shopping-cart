@@ -6,6 +6,6 @@ export const ProductsContainer = styled('section')`
   padding: 120px 20px 50px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(223px, 1fr));
   gap: 15px;
 `;
