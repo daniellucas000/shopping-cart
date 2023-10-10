@@ -59,13 +59,20 @@ export const CardInfo = styled('div')`
     word-break: break-word;
     margin-bottom: 1rem;
   }
+`;
 
-  > span {
-    font-size: 1.875rem;
-    font-weight: 400;
-    display: block;
-    margin-bottom: 10px;
-  }
+export const PromotionalPrice = styled('span')`
+  font-size: 1.875rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 10px;
+`;
+export const OriginalPrice = styled('span')`
+  font-weight: 400;
+  line-height: 1.25;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: line-through;
 `;
 
 export const SplitPrice = styled('span')`

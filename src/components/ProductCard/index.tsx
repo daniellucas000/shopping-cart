@@ -2,7 +2,13 @@ import { useCart } from '../../context/CartContext';
 import { ICartProduct } from '../../types';
 import { formatCurrency } from '../../utils/formatCurrency';
 
-import { CardInfo, ProductCardContainer, SplitPrice } from './styled';
+import {
+  CardInfo,
+  OriginalPrice,
+  ProductCardContainer,
+  PromotionalPrice,
+  SplitPrice,
+} from './styled';
 import { BsCart2 } from 'react-icons/bs';
 
 export interface Product {
@@ -10,7 +16,7 @@ export interface Product {
 }
 
 export function ProductCard({ product }: Product) {
-  console.log(product);
+  console.log(product.original_price);
   const { cartItems, setCartItems } = useCart();
 
   function handleAddCart() {
@@ -25,7 +31,12 @@ export function ProductCard({ product }: Product) {
 
       <CardInfo>
         <h2>{product.title}</h2>
-        <span>{formatCurrency(product.price)}</span>
+        {product.original_price ? (
+          <OriginalPrice>
+            {formatCurrency(product.original_price)}
+          </OriginalPrice>
+        ) : null}
+        <PromotionalPrice>{formatCurrency(product.price)}</PromotionalPrice>
         <div>
           <SplitPrice>
             em <span> 10x {formatCurrency(product.price / 10)} sem juros</span>
