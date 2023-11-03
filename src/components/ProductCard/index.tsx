@@ -16,7 +16,6 @@ export interface Product {
 }
 
 export function ProductCard({ product }: Product) {
-  console.log(product.original_price);
   const { cartItems, setCartItems } = useCart();
 
   function handleAddCart() {
